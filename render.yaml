@@ -1,0 +1,17 @@
+services:
+  # The FastAPI Backend Kernel
+  - type: web
+    name: akansh-os-kernel
+    env: python
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+
+  # The Frontend Portfolio OS
+  - type: web
+    name: akansh-os-frontend
+    env: static
+    buildCommand: ""
+    staticPublishPath: "./"
