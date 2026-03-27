@@ -3,94 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Akansh Saxena - Systems Architect and Future Product Leader portfolio. Bridging high-level AI scalability with low-level precision.">
-    <title>Akansh Saxena | Systems Architect</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Akansh OS - Portfolio of Akansh Saxena, Final Year B.Tech CSE at J.K. Institute of Applied Physics & Technology.">
+    <title>Akansh OS | Systems Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="blob-c blob-1"></div>
-    <div class="blob-c blob-2"></div>
-    
-    <div class="glass-container">
-        <header>
-            <h1 class="glitch" data-text="Akansh Saxena">Akansh Saxena</h1>
-            <p class="subtitle">Systems Architect & Future Product Leader</p>
-        </header>
+    <div id="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-grid">
+            <div class="icon" ondblclick="openWindow('terminal-window')">
+                <img src="https://img.icons8.com/nolan/64/console.png" alt="Terminal Console">
+                <span>Terminal.exe</span>
+            </div>
+            <div class="icon" ondblclick="openWindow('game-center-window')">
+                <img src="https://img.icons8.com/nolan/64/dice.png" alt="Game Center Dice">
+                <span>GameCenter.exe</span>
+            </div>
+            <div class="icon" onclick="window.open('https://akansh-saxena-quantum-ml-simulator-streamlit-app-alocj1.streamlit.app/')">
+                <img src="https://img.icons8.com/nolan/64/artificial-intelligence.png" alt="SafeStreets">
+                <span>Quantum_ML.exe</span>
+            </div>
+            <div class="icon" onclick="alert('FastAPI Gateway is mapping live data to the kernel. Check system logs for details.')">
+                <img src="https://img.icons8.com/nolan/64/network.png" alt="Aether Gateway">
+                <span>AetherGateway.exe</span>
+            </div>
+            <div class="icon" onclick="window.open('https://multimodal-emotion-detection-system-hzhkfy7zirm8lbekgtky9c.streamlit.app/')">
+                <img src="https://img.icons8.com/nolan/64/face-recognition.png" alt="Multimodal Engine">
+                <span>EmotionEngine.exe</span>
+            </div>
+        </div>
 
-        <section class="bio-section">
-            <p class="bio-text">
-                As a Systems Architect and Future Product Leader, I build digital ecosystems that defy technical gravity. My work isn't just about lines of code; it’s about <strong>authorized engineering</strong>—every commit in my repositories (from the <em>Aether Gateway</em> to the <em>Multimodal Emotion Engine</em>) represents a calculated architectural decision.
-            </p>
-            <p class="bio-text mt">
-                Leveraging a 95th percentile analytical foundation, I bridge the gap between low-level precision (8051 Assembly) and high-level AI scalability. Explore my live deployments to see how I transform complex data into real-world business value.
-            </p>
-        </section>
-
-        <section class="deployments-section">
-            <h2 class="section-title">Live Ecosystems & Architecture</h2>
-            <div class="card-grid">
-                <div class="card glass-card" onclick="window.open('https://hoteldashboard01.streamlit.app/', '_blank')">
-                    <div class="card-glow"></div>
-                    <h3>Aether Hospitality</h3>
-                    <p>A full-stack ecosystem with Dockerized FastAPI backends, real-time metrics, and IoT scaling architecture. <span style="display:block; margin-top:0.5rem; color:var(--accent-2); font-weight:600; font-size:0.85rem;">[Live App]</span></p>
-                </div>
-                <div class="card glass-card" onclick="window.open('https://akansh-saxena-quantum-ml-simulator-streamlit-app-alocj1.streamlit.app/', '_blank')">
-                    <div class="card-glow"></div>
-                    <h3>Quantum ML Simulator</h3>
-                    <p>Interactive web application bridging advanced machine learning models with accessible Streamlit UI for data simulation. <span style="display:block; margin-top:0.5rem; color:var(--accent-2); font-weight:600; font-size:0.85rem;">[Live App]</span></p>
-                </div>
-                <div class="card glass-card" onclick="window.open('https://multimodal-emotion-detection-system-hzhkfy7zirm8lbekgtky9c.streamlit.app/', '_blank')">
-                    <div class="card-glow"></div>
-                    <h3>Multimodal Emotion Engine</h3>
-                    <p>Advanced deep learning algorithms for real-time inference and metric optimization. <span style="display:block; margin-top:0.5rem; color:var(--accent-2); font-weight:600; font-size:0.85rem;">[Live App]</span></p>
-                </div>
-                <div class="card glass-card">
-                    <div class="card-glow"></div>
-                    <h3>8051 Electronic Dice</h3>
-                    <p>Low-level precision engineering utilizing an 8051 Microcontroller interfaced with a 7-Segment Digital Display for deterministic logic execution.</p>
-                </div>
-                <div class="card glass-card" onclick="window.open('#', '_blank')">
-                    <div class="card-glow"></div>
-                    <h3>Smart Irrigation IoT</h3>
-                    <p>Enterprise weather analytics mapping firmware-level logic to scalable cloud workflows. <span style="display:block; margin-top:0.5rem; color:var(--accent-2); font-weight:600; font-size:0.85rem;">[Live App]</span></p>
+        <!-- Terminal Window -->
+        <div class="window glass-panel" id="terminal-window" style="top: 10%; left: 10%; width: 600px; display: none;">
+            <div class="title-bar">
+                <span>Terminal - Project by Akansh Saxena | J.K. Institute</span>
+                <div class="window-controls">
+                    <button class="minimize" onclick="closeWindow('terminal-window')"></button>
+                    <button class="maximize"></button>
+                    <button class="close" onclick="closeWindow('terminal-window')"></button>
                 </div>
             </div>
-        </section>
-
-        <footer>
-            <p>Authorized Commits &copy; 2026. Architected by Akansh Saxena.</p>
-            <div class="socials">
-                <a href="https://github.com/AkanshSaxena" target="_blank" class="cyber-btn">View GitHub</a>
-                <a href="#" class="cyber-btn">LinkedIn</a>
+            <div class="window-content terminal-content" id="terminal-body" onclick="document.getElementById('cmd-input').focus()">
+                <div class="log">Akansh OS System Monitor [Version 1.0.0]</div>
+                <div class="log">(c) 2026 Authorized Engineering. All rights reserved.</div>
+                <br>
+                <div class="log" style="color: #00d2ff;">Type 'help' to see available commands or 'whoami' to verify origin.</div>
+                <br>
+                <div id="terminal-output"></div>
+                <div class="cmd-line">
+                    <span class="prompt">akansh@os:~$</span>
+                    <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus>
+                </div>
             </div>
-        </footer>
+        </div>
+
+        <!-- Game Center Window -->
+        <div class="window glass-panel" id="game-center-window" style="top: 15%; left: 40%; width: 500px; display: none;">
+            <div class="title-bar">
+                <span>8051 Dice - Project by Akansh Saxena | J.K. Institute</span>
+                <div class="window-controls">
+                    <button class="minimize" onclick="closeWindow('game-center-window')"></button>
+                    <button class="maximize"></button>
+                    <button class="close" onclick="closeWindow('game-center-window')"></button>
+                </div>
+            </div>
+            <div class="window-content game-content">
+                <h3 style="margin-bottom: 5px; color:#f0f0f5;">8051 Electronic Dice Emulator</h3>
+                <p style="color: #9494a0; font-size: 0.9rem; margin-bottom: 20px;">Low-latency (<10ms) deterministic execution.</p>
+                
+                <div class="seven-segment-bg">
+                    <div id="segment-display">8</div>
+                </div>
+
+                <button id="roll-btn" class="cyber-btn" onclick="rollDice()">Execute Roll Logic</button>
+                <div id="dice-log" class="dice-log">Awaiting hardware interrupt...</div>
+            </div>
+        </div>
+
     </div>
 
-    <script>
-        const cards = document.querySelectorAll('.glass-card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-                
-                // Tilt effect
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -10;
-                const rotateY = ((x - centerX) / centerX) * 10;
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <div class="start-btn" onclick="alert('Akansh OS Framework Kernel Active - FastAPI Link Established.')">
+            <img src="https://img.icons8.com/nolan/64/windows-client.png" alt="Start" width="24" height="24">
+        </div>
+        <div class="task-icons">
+            <img src="https://img.icons8.com/nolan/64/console.png" alt="Terminal" onclick="openWindow('terminal-window')">
+            <img src="https://img.icons8.com/nolan/64/dice.png" alt="Game Center" onclick="openWindow('game-center-window')">
+        </div>
+        <div class="system-tray">
+            <span id="sys-time">00:00</span>
+        </div>
+    </div>
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
-                card.style.setProperty('--mouse-x', `-100%`);
-                card.style.setProperty('--mouse-y', `-100%`);
-            });
-        });
-    </script>
+    <!-- Background Blobs -->
+    <div class="blob-c blob-1"></div>
+    <div class="blob-c blob-2"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
