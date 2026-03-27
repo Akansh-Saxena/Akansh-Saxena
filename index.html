@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akansh Saxena - Systems Architect and Future Product Leader portfolio. Bridging high-level AI scalability with low-level precision.">
+    <title>Akansh Saxena | Systems Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob-c blob-1"></div>
+    <div class="blob-c blob-2"></div>
+    
+    <div class="glass-container">
+        <header>
+            <h1 class="glitch" data-text="Akansh Saxena">Akansh Saxena</h1>
+            <p class="subtitle">Systems Architect & Future Product Leader</p>
+        </header>
+
+        <section class="bio-section">
+            <p class="bio-text">
+                As a Systems Architect and Future Product Leader, I build digital ecosystems that defy technical gravity. My work isn't just about lines of code; it’s about <strong>authorized engineering</strong>—every commit in my repositories (from the <em>Aether Gateway</em> to the <em>Multimodal Emotion Engine</em>) represents a calculated architectural decision.
+            </p>
+            <p class="bio-text mt">
+                Leveraging a 95th percentile analytical foundation, I bridge the gap between low-level precision (8051 Assembly) and high-level AI scalability. Explore my live deployments to see how I transform complex data into real-world business value.
+            </p>
+        </section>
+
+        <section class="deployments-section">
+            <h2 class="section-title">Live Ecosystems</h2>
+            <div class="card-grid">
+                <div class="card glass-card">
+                    <div class="card-glow"></div>
+                    <h3>Aether Hospitality</h3>
+                    <p>A full-stack ecosystem with Dockerized FastAPI backends, real-time metrics, and IoT scaling architecture.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="card-glow"></div>
+                    <h3>Multimodal Emotion Engine</h3>
+                    <p>Advanced deep learning algorithms integrated with microservices for real-time inference and metric optimization.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="card-glow"></div>
+                    <h3>Smart Irrigation IoT</h3>
+                    <p>Enterprise weather analytics mapping firmware-level logic to scalable cloud workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Authorized Commits &copy; 2026. Architected by Akansh Saxena.</p>
+            <div class="socials">
+                <a href="https://github.com/AkanshSaxena" target="_blank" class="cyber-btn">View GitHub</a>
+                <a href="#" class="cyber-btn">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+                
+                // Tilt effect
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -10;
+                const rotateY = ((x - centerX) / centerX) * 10;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
+                card.style.setProperty('--mouse-x', `-100%`);
+                card.style.setProperty('--mouse-y', `-100%`);
+            });
+        });
+    </script>
+</body>
+</html>
